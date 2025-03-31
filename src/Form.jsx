@@ -103,6 +103,11 @@ export default function Form({ onSubmit }) {
             Draft
           </label>
         </div>
+        <div className="mt-4">
+          <button type="submit" className="btn btn-primary">
+            Invia Post
+          </button>
+        </div>
       </form>
     </>
   );

@@ -24,10 +24,12 @@ export default function FormData() {
   };
 
   return (
-    <div>
+    <div className="mt-3">
       <Form onSubmit={handleSubmit} />
       {response && (
-        <div className="alert alert-success">Post creato con successo!</div>
+        <div className=" mt-3 alert alert-success">
+          Post creato con successo!
+        </div>
       )}
     </div>
   );
