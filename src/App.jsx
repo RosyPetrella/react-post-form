@@ -9,12 +9,15 @@
 // https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts
 // Questo endpoint, in caso di successo, vi restituisce i dati inviati.
 // Stampateli in console per verificare di essere riusciti ad inviare correttamente tutto!
-import Form from "./Form";
+import FormData from "./FormData";
 
 export default function App() {
   return (
     <>
-      <Form />
+      <div className="container">
+        <h1 className="text-center my-4">Crea un nuovo post</h1>
+        <FormData />
+      </div>
     </>
   );
 }

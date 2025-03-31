@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-export default function Form() {
+export default function Form({ onSubmit }) {
   const [formData, setFormData] = useState({
     author: "",
     title: "",
     body: "",
-    public: "",
+    public: "false",
   });
 
   const handleChange = (e) => {
@@ -51,7 +51,7 @@ export default function Form() {
               class="form-control"
               id="colFormLabel"
               name="title"
-              value={formData.author}
+              value={formData.title}
               onChange={handleChange}
               required
             ></input>
@@ -79,14 +79,13 @@ export default function Form() {
           <input
             class="form-check-input"
             type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault1"
-            checked
-            value={formData.public}
+            name="Public"
+            id="public-true"
+            checked={formData.public === true}
+            value="true"
             onChange={handleChange}
-            required
           ></input>
-          <label class="form-check-label" for="flexRadioDefault1">
+          <label class="form-check-label" for="public-true">
             Public
           </label>
         </div>
@@ -94,13 +93,13 @@ export default function Form() {
           <input
             class="form-check-input"
             type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault2"
+            name="public"
+            id="public-false"
             value={formData.public}
             onChange={handleChange}
-            checked
+            checked={formData.public === false}
           ></input>
-          <label class="form-check-label" for="flexRadioDefault2">
+          <label class="form-check-label" for="public-false">
             Draft
           </label>
         </div>
